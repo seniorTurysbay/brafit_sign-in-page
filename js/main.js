@@ -1,0 +1,1 @@
+let rightSight = document.querySelector(".signup_right");

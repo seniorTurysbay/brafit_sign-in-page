@@ -1,0 +1,100 @@
+@mixin label_select_placeholder
+  font-size: 13px
+  color: #727E8E
+  width: 425px
+  border-radius: 4px
+  border: 1px solid #E9ECF5
+  padding: 12px 0 12px 14px
+  box-sizing: border-box
+*
+  font-family: sans-serif
+  font-style: normal
+  font-weight: normal
+.signup
+  //margin-top: 107px
+  display: flex
+  &_left
+    h1
+      margin-top: 107px
+      font-size: 36px
+      text-transform: uppercase
+      color: #3F4551
+    h2
+      margin-top: 8px
+      font-size: 16px
+      color: #727E8E
+    &_img
+      margin: 0
+      img
+        //margin-top: 93px
+        margin: 93px 48px 83px 0
+        width: 626px
+        height: 351px
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.05))
+        border-radius: 10px
+  &_right
+    background: #F7F8FC
+    padding: 0 106px 0 106px
+    //for my pc 0 45px 0 45px
+    //padding: 0 133px 0 133px
+    h2
+      //font-family: Roboto
+      font-style: normal
+      font-weight: 500
+      font-size: 24px
+      line-height: 32px
+      color: #3F4551
+      padding-top: 112px
+      //margin: 0 auto
+      text-align: center
+
+.form-group
+  label
+    display: block
+    margin-top: 25px
+    color: #202531
+    font-size: 13px
+    :nth-child(1)
+      margin-top: 0
+  input[type="text"]
+    display: block
+    margin-top: 5px
+    @include label_select_placeholder
+  select
+    margin-top: 5px
+    @include label_select_placeholder
+.checkbox
+  margin-top: 24px
+  label
+    display: inline
+    font-size: 14px
+    a
+      color: #3B99CC
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+.button
+  display: flex
+  justify-content: center
+  button
+    margin-top: 32px
+    background: #C90113
+    border-radius: 50px
+    padding: 6px 24px
+    font-size: 16px
+    font-weight: 500
+    color: #F2F2F2
+    border: none
+    //margin: 0 auto
+footer
+  p
+    margin-top: 158px
+    color: #727E8E
+    font-size: 14px
+    text-align: center
+  .icons-box
+    width: 116px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+
