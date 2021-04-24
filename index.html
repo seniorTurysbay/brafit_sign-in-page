@@ -18,51 +18,79 @@
                 <div class="signup_left_img">
                     <img src="img/main-img.png" alt="some photo">
                 </div>
+                <div class="signup_left_shapes">
+                    <img src="img/shapes/blur-circle.png" alt="shapes" class="blur-circle">
+                    <img src="img/shapes/blue-triangle.png" alt="shapes" class="blue-triangle">
+                    <img src="img/shapes/big-red-circle.png" alt="shapes" class="red-circle">
+                    <img src="img/shapes/pink-triangle.png" alt="shapes" class="pink-triangle">
+                    <img src="img/shapes/middle-blue-circle.png" alt="shapes" class="middle-blue-circle">
+                    <img src="img/shapes/small-blue-circle.png" alt="shapes" class="small-blue-circle">
+                </div>
             </div>
             <div class="signup_right">
                 <h2>Регистрация</h2>
-                <div class="active">
-                    <form action="#" method="POST" class="register-form" id="register-form">
+                <div class="signup_right_pre-reg active">
+                    <form action="" method="POST" name="signInForm" id="register-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email">Email*</label>
-                                <input type="text" name="email" id="email" placeholder="Введите e-mail" required/>
+                                <input type="text" name="email" id="email" placeholder="Введите e-mail"  onkeyup="success()"/>
                             </div>
                             <div class="form-group">
                                 <label for="name">Ваше ФИО*</label>
-                                <input type="text" name="name" id="name" placeholder="Введите ваше ФИО*" required/>
+                                <input type="text" name="fname" id="name" placeholder="Введите ваше ФИО*" />
                             </div>
                             <div class="form-group">
                                 <label for="country">Ваша страна*</label>
-                                <select name="country" id="country" required>
+                                <select id="country">
                                     <option Selected>Ваша страна</option>
                                     <option data-countryCode="RU" value="ru">Россия</option>
                                     <option data-countryCode="KZ" value="kz">Казахстан</option>
                                 </select>
                             </div>
                             <div class="form-group checkbox">
-                                <input type="checkbox" name="check" id="check" placeholder="Введите e-mail" required/>
+                                <input type="checkbox" id="check" placeholder="Введите e-mail" required/>
                                 <label for="check">Регистрируясь, вы подтверждаете, что принимаете <a href="">
                                     Пользовательское соглашение</a></label>
                             </div>
                             <div class="button">
-                                <button type="button">Регистрация</button>
+                                <!--                                <button type="submit" id="btn">Регистрация</button>-->
+                                <input type="submit" id="btn" value="Регистрация" disabled>
                             </div>
-                            <footer>
-                                <p>Используйте для регистрации свой аккаунт в соцсети</p>
-                                <div class="icons-box">
-                                    <img src="img/icons/facebook.png" alt="#">
-                                    <img src="img/icons/instagram.png" alt="#">
-                                    <img src="img/icons/twitter.png" alt="#">
-                                </div>
-                            </footer>
                         </div>
                     </form>
+                    <footer>
+                        <p>Используйте для регистрации свой аккаунт в соцсети</p>
+                        <div class="icons-box">
+                            <img src="img/icons/facebook.png" alt="#">
+                            <img src="img/icons/instagram.png" alt="#">
+                            <img src="img/icons/twitter.png" alt="#">
+                        </div>
+                    </footer>
+                </div>
+                <div class="signup_right_post-reg hide-temp">
+                    <div class="signup signup_right_post-reg_inner">
+                        <img src="img/icons/paper-plane.png" alt="">
+                        <h2>Мы отправили вам письмо по адресу</h2>
+                        <p class="mail"></p>
+                        <p class="mail-click">Нажмите по ссылке подтверждения в электронном <br>письме, чтобы приступить к использованию JEP</p>
+                        <p>Если вы не получали данное письмо: <br> <a href="#">Отправить уведомление еще раз</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script src="js/main.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+    // function success(){
+    //     if(document.getElementById("email").value==="") {
+    //         document.getElementById('btn').disabled = true;
+    //     } else {
+    //         document.getElementById('btn').disabled = false;
+    //     }
+    // }
+</script>
 </body>
 </html>

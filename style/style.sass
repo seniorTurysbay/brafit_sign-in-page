@@ -10,10 +10,38 @@
   font-family: sans-serif
   font-style: normal
   font-weight: normal
+body
+  height: 100vh
 .signup
-  //margin-top: 107px
   display: flex
   &_left
+    position: relative
+    &_shapes
+      .blur-circle
+        z-index: 0
+        position: absolute
+        bottom: 16px
+      .blue-triangle
+        position: absolute
+        left: 64px
+        bottom: 38px
+      .red-circle
+        position: absolute
+        bottom: 78px
+        left: 487px
+        z-index: 10
+      .pink-triangle
+        position: absolute
+        top: 238px
+        left: 556px
+      .middle-blue-circle
+        position: absolute
+        top: 268px
+        left: 464px
+      .small-blue-circle
+        position: absolute
+        top: 302px
+        left: 237px
     h1
       margin-top: 107px
       font-size: 36px
@@ -26,27 +54,51 @@
     &_img
       margin: 0
       img
-        //margin-top: 93px
         margin: 93px 48px 83px 0
         width: 626px
         height: 351px
         filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.05))
         border-radius: 10px
+        position: relative
+        z-index: 5
+
   &_right
     background: #F7F8FC
     padding: 0 106px 0 106px
-    //for my pc 0 45px 0 45px
-    //padding: 0 133px 0 133px
+    width: 425px
     h2
-      //font-family: Roboto
       font-style: normal
       font-weight: 500
       font-size: 24px
       line-height: 32px
       color: #3F4551
       padding-top: 112px
-      //margin: 0 auto
       text-align: center
+    &_post-reg
+      padding-top: 109px
+      &_inner
+        display: flex
+        flex-direction: column
+        align-items: center
+        img
+          margin-bottom: 11px
+        h2
+          padding: 0
+          font-weight: 500
+          font-size: 16px
+        p
+          font-size: 15px
+          color: #727E8E
+          text-align: center
+        .mail
+          color: #3B99CC
+          text-decoration-line: underline
+          font-size: 18px
+          margin-top: 11px
+        .mail-click
+          margin-bottom: 217px
+
+
 
 .form-group
   label
@@ -76,7 +128,8 @@
 .button
   display: flex
   justify-content: center
-  button
+  //button
+  input[type="submit"]
     margin-top: 32px
     background: #C90113
     border-radius: 50px
@@ -86,6 +139,8 @@
     color: #F2F2F2
     border: none
     //margin: 0 auto
+  input[type="submit"]:disabled
+    background: gray
 footer
   p
     margin-top: 158px
@@ -97,4 +152,8 @@ footer
     margin: 0 auto
     display: flex
     justify-content: space-between
+.active
+  display: block
+.hide-temp
+  display: none
 
